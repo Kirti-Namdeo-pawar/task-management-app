@@ -11,11 +11,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="darkModeToggle">
-        <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
-    </div>
+    <button class="sidebar-btn" onclick="toggleSidebar()">
+        <i class="bi bi-list"></i>
+    </button>
 
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+        <a href="/public/index.html"><i class="bi bi-calendar-check"></i> Schedule Task/To-do</a>
+        <a href="#"><i class="bi bi-clock"></i> Pomodoro</a>
+        <a href="/public/quiz.html"><i class="bi bi-question-circle"></i> Time Management Quiz</a>
+        <a href="/public/usefulTips.html"><i class="bi bi-lightbulb"></i> Time Management Strategies</a>
+        <a href="/public/users.html"><i class="bi bi-person"></i> User Account</a>
+        <a href="#"><i class="bi bi-gear"></i> Settings</a>
+    </div>
+    
+    <div class="content-area">
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="darkModeToggle">
+            <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+        </div>
     <div class="container mt-5">
         <div class="text-center">
             <h1 class="title mb-3">Task Management Dashboard</h1>
@@ -195,9 +210,15 @@
             </table>
         </div>
     </div>
-    
+   </div> 
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
     <script src="script.js"></script>
-   <script src="services.js"></script>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            const currentLeft = sidebar.style.left;
+            sidebar.style.left = currentLeft === "0px" ? "-250px" : "0px";
+        }
+    </script>
 </body>
 </html>
