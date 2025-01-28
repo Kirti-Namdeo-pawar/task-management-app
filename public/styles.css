@@ -307,8 +307,8 @@ body {
     position: fixed;
     top: 0;
     left: -250px;
-    background-color: #0056b3;
-    color: white;
+    background-color: #dbf7f7;
+    color: rgb(25, 5, 239);
     overflow-x: hidden;
     transition: 0.3s ease-in-out;
     padding-top: 60px;
@@ -320,13 +320,13 @@ body {
     align-items: center;
     padding: 10px 20px;
     text-decoration: none;
-    color: white;
+    color: rgb(5, 24, 238);
     font-size: 18px;
     transition: 0.2s;
 }
 
 #sidebar a:hover {
-    background-color: #004a99;
+    background-color: #6be3f3;
     text-decoration: none;
 }
 
