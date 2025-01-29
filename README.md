@@ -29,17 +29,9 @@ Time Management Quiz to evaluate efficiency
 4.Postman	-API testing
 🏗️ Installation & Setup
 1️⃣ Clone the repository:
-
-
-
 git clone https://github.com/yourusername/task-management-app.git
+
 cd task-management-app
-2️⃣ Install dependencies:
-
-
-npm install
-3️⃣ Start the backend server:
-
-
-node server.js
+2️⃣ Install dependencies:npm install
+3️⃣ Start the backend server:node server.js
 4️⃣ Open index.html in a browser or use a live server.
