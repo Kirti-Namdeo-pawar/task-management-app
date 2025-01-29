@@ -1,0 +1,75 @@
+#sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed; /* Ensures sidebar doesn't affect content */
+    top: 0;
+    left: -250px; /* Start hidden */
+    background-color: #dbf7f7;
+    color: rgb(25, 5, 239);
+    overflow-x: hidden;
+    transition: left 0.3s ease-in-out;
+    padding-top: 60px;
+    z-index: 1100; /* Ensures it's above content */
+}
+
+#sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgb(5, 24, 238);
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+#sidebar a:hover {
+    background-color: #6be3f3;
+    text-decoration: none;
+}
+
+#sidebar .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#sidebar a i {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    z-index: 2000; /* Increase z-index */
+}
+
+
+.sidebar-btn:hover {
+    background-color: #e7e9ea;
+}
+@media screen and (max-width: 768px) {
+    #sidebar {
+        width: 200px;
+    }
+}
+/* Main Content */
+.main-content {
+    transition: margin-left 0.3s ease-in-out;
+    margin-left: 0;
+}
+
+/* When Sidebar Opens */
+#sidebar.open + .main-content {
+    margin-left: 250px;
+}

@@ -34,6 +34,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/pomodoro', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'pomodoro.html'));
 });
+// Route to serve pomodoro.html
+app.get('/settings', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'settings.html'));
+});
 // API Routes
 
 // Get all tasks
