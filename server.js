@@ -30,6 +30,10 @@ const Task = mongoose.model('Task', taskSchema);
 const path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Route to serve pomodoro.html
+app.get('/pomodoro', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'pomodoro.html'));
+});
 // API Routes
 
 // Get all tasks
